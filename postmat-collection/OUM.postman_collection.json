@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "5b952ce5-dc85-49dc-89cd-1791aaa8fcb9",
+		"name": "OUM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30069386",
+		"_collection_link": "https://planetary-equinox-592183.postman.co/workspace/My-Workspace~e0766063-5de8-445a-80e7-7ad281560ab2/collection/30069386-5b952ce5-dc85-49dc-89cd-1791aaa8fcb9?action=share&source=collection_link&creator=30069386"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "customer/register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"sunil gamage\",\n  \"address\": \"Panadura rd Panadura\",\n  \"email\": \"sunil@gmail.com\",\n  \"dateOfBirth\": \"2001-02-10\",\n  \"gender\": \"Male\",\n  \"age\": 20,\n  \"cardHolderName\": \"sunil gamage\",\n  \"cardNumber\": \"990911889032\",\n  \"expiryDate\": \"07/19\",\n  \"cvv\": \"006\",\n  \"timestamp\": \"2025-09-02T10:30:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customer/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customer",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllcustomers",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerById",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomers",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customerId\": 1,\n  \"name\": \"Kasun Perera Silva\",\n  \"address\": \"456/B, Kandy Road, Colombo 07\",\n  \"email\": \"kasun@gmail.com\",\n  \"dateOfBirth\": \"1995-03-15\",\n  \"gender\": \"Male\",\n  \"age\": 30,\n  \"cardHolderName\": \"Kasun Perera Silva\",\n  \"cardNumber\": \"987654321098\",\n  \"expiryDate\": \"06/29\",\n  \"cvv\": \"789\",\n  \"timestamp\": \"2025-09-02T11:45:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCustomer",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/customers/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
